@@ -3,7 +3,7 @@ import componentsImage from './assets/images/components.png';
 import stateImage from './assets/images/state.png';
 import eventsImage from './assets/images/events.png';
 import Header from './Components/Header/Header';
-
+import Concept  from './Components/Concept/Concept';
 const concepts = [
   {
     title: 'Components',
@@ -30,21 +30,10 @@ function App() {
     <div>
       <Header/>
       <ul id="concepts">
-        <li className="concept">
-          <img src={concepts[0].image} alt="TODO: TITLE" />
-          <h2>{concepts[0].title}</h2>
-          <p>{concepts[0].description}</p>
-        </li>
-        <li className="concept">
-          <img src={concepts[1].image} alt="TODO: TITLE" />
-          <h2>{concepts[1].title}</h2>
-          <p>{concepts[1].description}</p>
-        </li>
-        <li className="concept">
-          <img src={concepts[2].image} alt="TODO: TITLE" />
-          <h2>{concepts[2].title}</h2>
-          <p>{concepts[2].description}</p>
-        </li>
+        <Concept image={concepts[0].image} title={concepts[0].title} description={concepts[0].description}></Concept>
+        <Concept image={concepts[1].image} title={concepts[1].title} description={concepts[1].description}></Concept>
+        <Concept image={concepts[2].image} title={concepts[2].title} description={concepts[2].description}></Concept>
+
       </ul>
     </div>
   );
